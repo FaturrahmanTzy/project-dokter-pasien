@@ -12,13 +12,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const app = express()
 app.set('view engine', 'ejs')
 app.use(expressEjsLayouts)
-app.set('layout', './template/index')
+app.set('layout', './template/app')
 //agar file css dan js terbaca maka gunakan express.static()
-app.use(express.static(path.join(__dirname, '/public/admin')))
+app.use(express.static(path.join(__dirname, '/public/admin')));
 
 //default express js tidak bisa membaca langsung file css dan library js
 //oleh karena itu perlu dilakukan terlebih dahulu konfigurasi
-// agar file css dan js yang ada didalam folder publicdapat terbaca di semua file
+// agar file css dan js yang ada didalam folder public dapat terbaca di semua file
 //yang ada didalam projek
 
 app.use('/dashboard', router)

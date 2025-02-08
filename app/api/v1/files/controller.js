@@ -1,9 +1,15 @@
 import { dokter, pasien } from './model.js';
 
-const getData = (req, res) => {
+const getDokter = (req, res) => {
     // const looping = dataPelanggan.forEach()
     // res.render(looping)
-    res.render('template/index', { dokter })
+    res.render('orang/dokter', { dokter, pasien })
 }
 
-export { getData }
+const getPasien = (req, res) => {
+    // const looping = dataPelanggan.forEach()
+    // res.render(looping)
+    res.render('orang/pasien', { dokter, pasien })
+}
+
+export { getDokter, getPasien }
