@@ -210,6 +210,15 @@
                 Daftar Dokter
             </h2>
         </div>
+        <tbody>
+            <% dokter.forEach(animal => { %>
+                <tr>
+                    <td><%= animal.id %></td>
+                    <td><%= animal.nama %></td>
+                    <td><%= animal.alamat %></td>
+                </tr>
+            <% }) %>
+        </tbody>
 
         </div>
         <!-- Content End -->
