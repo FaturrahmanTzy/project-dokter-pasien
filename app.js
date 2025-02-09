@@ -1,4 +1,3 @@
-
 import express from "express"
 import routerDokter from './app/api/v1/dokter/router.js'
 import routerPasien from './app/api/v1/pasien/router.js'
@@ -13,10 +12,8 @@ app.use(expressEjsLayouts)
 app.set("layout", "./template/app")
 app.use(express.static(path.join(__dirname ,"public")))
 
-
 app.use("/dashboard", routerDokter)
 app.use("/dashboard", routerPasien)
-
 
 app.listen(3000, () => {
     console.log('Server is running...')
