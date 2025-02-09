@@ -1,17 +1,18 @@
                 <!-- MAIN CONTENT -->
+                <div class="container-fluid pt-4 px-4">
                 <div class="col-lg-12 col-6">
                     <!-- small box -->
                     <div class="small-box bg-light">
                     <div class="inner">
-                        <h5>Daftar Dokter</h5>
+                        <h4>Daftar Dokter</h4>
                         <table class="table">
-                            <thead class="bg-white">
+                            <thead class="bg-dark text-white">
                                 <th>#</th>
                                 <th>Nama Pelanggan</th>
                                 <th>Usia</th>
                             </thead>
                             <tbody>
-                                <% dokter.forEach((element) => { %>
+                                <% data.forEach((element) => { %>
                                     <tr>
                                         <td><%= element.id %></td>
                                         <td><%= element.nama %></td>
@@ -23,4 +24,4 @@
                     </div>
                     </div>
                 </div>
-                <!-- END CONTENT -->
+                </div>
