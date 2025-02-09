@@ -1,6 +1,7 @@
 import express from "express"
 import routerDokter from './app/api/v1/dokter/router.js'
 import routerPasien from './app/api/v1/pasien/router.js'
+import routerAll from './app/api/v1/all/router.js'
 import expressEjsLayouts from "express-ejs-layouts";
 import path from "path"
 import { fileURLToPath } from "url"
@@ -12,6 +13,7 @@ app.use(expressEjsLayouts)
 app.set("layout", "./template/app")
 app.use(express.static(path.join(__dirname ,"public")))
 
+app.use("/dashboard", routerAll)
 app.use("/dashboard", routerDokter)
 app.use("/dashboard", routerPasien)
 
