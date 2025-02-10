@@ -20,7 +20,7 @@ const dokter = [
         alamat: "Tanggerang"
     },
     {
-        id: 4,
+        id: 5,
         nama: "Dr. Indah",
         alamat: "Jakarta Pusat"
     },
